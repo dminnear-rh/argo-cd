@@ -1,0 +1,26 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: helloworld
+  namespace: default
+  annotations:
+    serving.kserve.io/stop: 'true'
+    serving.kserve.io/deploymentMode: RawDeployment
+spec: {}
+status:
+  conditions:
+    - lastTransitionTime: '2025-10-02T22:06:15Z'
+      reason: Stopped
+      status: 'False'
+      type: PredictorReady
+    - lastTransitionTime: '2025-10-02T22:06:15Z'
+      reason: Stopped
+      status: 'False'
+      type: Ready
+    - lastTransitionTime: '2025-10-02T22:06:15Z'
+      severity: Info
+      status: 'True'
+      type: Stopped
+  deploymentMode: RawDeployment
+  modelStatus:
+    transitionStatus: ''
